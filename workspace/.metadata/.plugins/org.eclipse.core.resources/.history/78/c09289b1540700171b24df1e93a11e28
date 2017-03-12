@@ -1,0 +1,14 @@
+package steps_definitions;
+
+import page_objects.HomePage;
+import utilities.MyDriver;
+
+public class HomePageSteps {
+ MyDriver driver = new MyDriver();
+ HomePage homeage = new HomePage();
+ 
+ public HomePageSteps{
+	 
+ }
+
+}

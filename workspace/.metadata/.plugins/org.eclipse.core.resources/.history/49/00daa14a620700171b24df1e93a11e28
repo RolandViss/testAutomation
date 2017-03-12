@@ -1,0 +1,15 @@
+package config;
+
+public class Configuration {
+
+	public static class Url {
+
+		public static String app_url = "https://www.google.ru/";
+	}
+
+	public static class Browser {
+
+		public static String browser = "ff";
+	}
+
+}

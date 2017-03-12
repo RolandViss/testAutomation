@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="learnAutomation" project="learnAutomation" tests="4" started="4" failures="0" errors="2" ignored="3">
+  <testsuite name="steps_definitions.RunnerTest" time="0.034">
+    <testsuite name="Feature: google search" time="0.034">
+      <testsuite name="java" time="0.012" incomplete="true">
+        <error>java.lang.NullPointerException&#13;
+	at utilities.MyDriver.navigate(MyDriver.java:94)&#13;
+	at steps_definitions.HomePageSteps.i_navigate_to_the_Home_page(HomePageSteps.java:23)&#13;
+	at ✽.When I navigate to the Home page(features/homePage.feature:48)&#13;
+&#13;
+</error>
+        <testcase name="When I navigate to the Home page(Scenario: first test " classname="java)" time="0.005">
+          <error>java.lang.NullPointerException&#13;
+	at utilities.MyDriver.navigate(MyDriver.java:94)&#13;
+	at steps_definitions.HomePageSteps.i_navigate_to_the_Home_page(HomePageSteps.java:23)&#13;
+	at ✽.When I navigate to the Home page(features/homePage.feature:48)&#13;
+&#13;
+</error>
+        </testcase>
+        <testcase name="Then I see search feald(Scenario: first test " classname="java)" time="0.001" ignored="true"/>
+        <testcase name="When I text iin search filed(Scenario: first test " classname="java)" time="0.011" ignored="true"/>
+        <testcase name="Then I see results(Scenario: first test " classname="java)" time="0.006" ignored="true"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

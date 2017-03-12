@@ -1,0 +1,16 @@
+package steps_definitions;
+
+import org.openqa.selenium.support.PageFactory;
+
+import page_objects.HomePage;
+import utilities.MyDriver;
+
+public class HomePageSteps {
+ MyDriver driver = new MyDriver();
+ HomePage homePage = new HomePage();
+ 
+ public HomePageSteps{
+	 PageFactory.initElements(driver, homePage);
+ }
+
+}

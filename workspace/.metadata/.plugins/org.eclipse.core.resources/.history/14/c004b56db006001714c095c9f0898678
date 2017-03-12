@@ -1,0 +1,45 @@
+package utiliies;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+import config.Configuration;
+
+public class Driver {
+	 public static WebDriver Instance = null;
+	 
+	 public static void Initialize(){
+		 if(Instance == null){
+			 if(Configuration.Browser.browser.equalsIgnoreCase("ff"))
+				 Instance = new FirefoxDriver();
+			 
+			 else if(Configuration.Browser.browser.equalsIgnoreCase("ie"))
+				 Instance = new InternetExplorerDriver();
+			 
+			 else if(Configuration.Browser.browser.equalsIgnoreCase("chrome"))
+				 System.setProperty("webdriver.chrome.driver", "C:\\Users\\Roland\\workspace\\chromedriver_win32");
+				 Instance = new ChromeDriver();
+		 }
+		 Instance.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		 Instance.manage().window().maximize();
+	 }
+	 
+	 public void close(){
+		 System.out.println("Closing browser");
+		 Instance.close();
+		 Instance=null;
+	 }
+	 
+	 public void quit(){
+		 System.out.println("Quiting browser");
+		 Instance.quit();
+		 Instance=null;
+	 }
+	 
+	 
+
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunnerTest" project="learnAutomation" tests="4" started="4" failures="0" errors="0" ignored="4">
+  <testsuite name="utilities.RunnerTest" time="0.0">
+    <testsuite name="Feature: google search" time="0.0">
+      <testsuite name="java" time="0.0" incomplete="true">
+        <skipped/>
+        <testcase name="When I navigate to the Home page(Scenario: first test " classname="java)" time="0.0" ignored="true"/>
+        <testcase name="Then I see search feald(Scenario: first test " classname="java)" time="0.0" ignored="true"/>
+        <testcase name="When I text iin search filed(Scenario: first test " classname="java)" time="0.0" ignored="true"/>
+        <testcase name="Then I see results(Scenario: first test " classname="java)" time="0.0" ignored="true"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,102 @@
+package utilities;
+
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+import config.Configuration;
+
+public class MyDriver implements WebDriver {
+	public static WebDriver Instance = null;
+
+	public static void Initialize() {
+		if (Instance == null) {
+			if (Configuration.Browser.browser.equalsIgnoreCase("ff"))
+				Instance = new FirefoxDriver();
+
+			else if (Configuration.Browser.browser.equalsIgnoreCase("ie"))
+				Instance = new InternetExplorerDriver();
+
+			else if (Configuration.Browser.browser.equalsIgnoreCase("chrome"))
+				System.setProperty("webdriver.chrome.driver", "C:\\Users\\Roland\\workspace\\chromedriver_win32");
+			Instance = new ChromeDriver();
+		}
+		Instance.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		Instance.manage().window().maximize();
+	}
+
+	public void close() {
+		System.out.println("Closing browser");
+		Instance.close();
+		Instance = null;
+	}
+
+	public void quit() {
+		System.out.println("Quiting browser");
+		Instance.quit();
+		Instance = null;
+	}
+
+	public WebElement findElement(By arg0) {
+		// TODO Auto-generated method stub
+		return Instance.findElement(arg0);
+	}
+
+	public List<WebElement> findElements(By arg0) {
+		// TODO Auto-generated method stub
+		return Instance.findElements(arg0);
+	}
+
+	public void get(String arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public String getCurrentUrl() {
+		// TODO Auto-generated method stub
+		return Instance.getCurrentUrl();
+	}
+
+	public String getPageSource() {
+		// TODO Auto-generated method stub
+		return Instance.getPageSource();
+	}
+
+	public String getTitle() {
+		// TODO Auto-generated method stub
+		return Instance.getTitle()
+	}
+
+	public String getWindowHandle() {
+		// TODO Auto-generated method stub
+		return Instance.getWindowHandle();
+	}
+
+	public Set<String> getWindowHandles() {
+		// TODO Auto-generated method stub
+		return Instance.getWindowHandles();
+	}
+
+	public Options manage() {
+		// TODO Auto-generated method stub
+		return Instance.manage();
+	}
+
+	public Navigation navigate() {
+		// TODO Auto-generated method stub
+		return Instance.navigate();
+	}
+
+	public TargetLocator switchTo() {
+		// TODO Auto-generated method stub
+		return Instance.switchTo();
+	}
+
+}

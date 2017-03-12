@@ -1,0 +1,25 @@
+package page_objects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+public static class Driver {
+	 public static WebDriver Instance = null;
+	 public static String browser = "ff";
+	 
+	 public static void Initialize(){
+		 if(Instance == null){
+			 if(browser.equalsIgnoreCase("ff"))
+				 Instance = new FirefoxDriver();
+			 
+			 else if(browser.equalsIgnoreCase("ie"))
+				 Instance = new InternetExplorerDriver();
+			 
+			 else if(browser.equalsIgnoreCase("ie"))
+				 Instance = new InternetExplorerDriver();
+		 }
+	 }
+
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunnerTest" project="learnAutomation" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="steps_definitions.RunnerTest" time="0.016">
+    <testsuite name="Feature: google search" time="0.016">
+      <testsuite name="java" time="0.016">
+        <testcase name="When I navigate to the Home page(Scenario: first test " classname="java)" time="0.006"/>
+        <testcase name="Then I see search feald(Scenario: first test " classname="java)" time="0.002"/>
+        <testcase name="When I text iin search filed(Scenario: first test " classname="java)" time="0.002"/>
+        <testcase name="Then I see results(Scenario: first test " classname="java)" time="0.006"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>
